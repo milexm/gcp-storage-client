@@ -1,0 +1,96 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.acloudysky</groupId>
+  <artifactId>google-storage-client</artifactId>
+  <version>1.0.0</version>
+  <name>google-storage-client</name>
+  
+  
+  <dependencies>
+  
+ 
+	<!-- https://mvnrepository.com/artifact/com.google.apis/google-api-services-oauth2 -->
+	<dependency>
+    	<groupId>com.google.apis</groupId>
+    	<artifactId>google-api-services-oauth2</artifactId>
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/com.google.http-client/google-http-client -->
+	<dependency>
+    	<groupId>com.google.http-client</groupId>
+    	<artifactId>google-http-client</artifactId>
+    	<version>${project.http.version}</version>
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/com.google.http-client/google-http-client-jackson2 
+	Required for XML and JSON parsing -->
+	<dependency>
+    	<groupId>com.google.http-client</groupId>
+    	<artifactId>google-http-client-jackson2</artifactId>
+    	<version>${project.http.version}</version>
+	</dependency>
+
+
+	<!-- https://mvnrepository.com/artifact/com.google.guava/guava 
+	Access Stopwatch for object loader purposes -->
+	<dependency>
+    	<groupId>com.google.guava</groupId>
+    	<artifactId>guava</artifactId>
+	</dependency>
+
+<!-- https://mvnrepository.com/artifact/com.google.oauth-client/google-oauth-client-java6 
+  	Java support for OAuth -->
+	<dependency>
+    	<groupId>com.google.oauth-client</groupId>
+    	<artifactId>google-oauth-client-java6</artifactId>
+    	<version>${project.java6.version}</version>
+	</dependency>
+  
+  
+  	<!-- https://mvnrepository.com/artifact/com.google.oauth-client/google-oauth-client-jetty 
+  	Jetty for authorization code flow support -->
+  	<dependency>
+  		<groupId>com.google.oauth-client</groupId>
+  		<artifactId>google-oauth-client-jetty</artifactId>
+  		<version>${project.jetty.version}</version>
+  		
+	</dependency>
+	<!-- Cloud Storage service API -->
+	<dependency>
+    	<groupId>com.google.apis</groupId>
+    	<artifactId>google-api-services-storage</artifactId>
+    	<version>${project.storage.version}</version>
+	</dependency>
+
+	
+    
+ </dependencies>
+ 
+ <properties>
+   	<project.http.version>1.22.0</project.http.version>
+   	<project.oauth.version>v2-rev126-1.22.0</project.oauth.version>
+   	<project.java6.version>1.22.0</project.java6.version>
+   	<project.jetty.version>1.22.0</project.jetty.version>
+   	<project.storage.version>v1-rev105-1.22.0</project.storage.version>
+   	<project.guava.version>22.0-rc1</project.guava.version>
+   	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+ </properties>
+ 
+
+ 
+ <dependencyManagement>
+ 	<dependencies>
+ 		<dependency>
+ 			<groupId>com.google.apis</groupId>
+ 			<artifactId>google-api-services-oauth2</artifactId>
+ 			<version>${project.oauth.version}</version>
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>com.google.guava</groupId>
+ 			<artifactId>guava</artifactId>
+ 			<version>${project.guava.version}</version>
+ 		</dependency>
+ 	</dependencies>
+ </dependencyManagement>
+ 
+</project>

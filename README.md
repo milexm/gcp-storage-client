@@ -3,7 +3,7 @@
 Java console application showing how to interact with Google Cloud Storage.This is a simple command line client application that eliminates unnecessary clutter and shows the basic logic to interact with Google Cloud Storage. Hopefully this will help you to understand the syntax (and semantic) of the API.
 The following figure is the application architecture (class diagram):
 
-![Event Trace](./gcp-storage-client/gcp-storage-client.gif) 
+![Event Trace](./gcp-storage-client.gif) 
 
 The application interacts with the [Google Cloud Storage](https://cloud.google.com/storage/docs/overview) via its REST API using the related Google Java client library. For more information, see [Google API Client Libraries](https://developers.google.com/api-client-library/). See also [Cloud Programming REST API](http://acloudysky.com/cloud-programming-rest-api/). 
 See related blog post at [Build GCP Cloud Storage Client](http://acloudysky.com/build-gcp-cloud-storage-client/). 
